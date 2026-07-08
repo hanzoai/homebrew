@@ -5,13 +5,13 @@
 class Replicate < Formula
   desc "Streaming replication for SQLite databases"
   homepage "https://github.com/hanzoai/replicate"
-  version "0.9.2"
+  version "0.9.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hanzoai/replicate/releases/download/v0.9.2/replicate-0.9.2-darwin-x86_64.tar.gz"
-      sha256 "6df3ac0d39f5d759268bf8ce4fbac7e5dd1a9111d17772dfa5e5764fdbe9760f"
+      url "https://github.com/hanzoai/replicate/releases/download/v0.9.3/replicate-0.9.3-darwin-x86_64.tar.gz"
+      sha256 "056a8d03c056d8f808b7e263372dff758a472f503390623c8dfa869fbb655fea"
 
       define_method(:install) do
         bin.install "replicate"
@@ -19,8 +19,8 @@ class Replicate < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hanzoai/replicate/releases/download/v0.9.2/replicate-0.9.2-darwin-arm64.tar.gz"
-      sha256 "43ff30e43c181ec2c6a28e67f7a08fcd825aaa8d5180b0bf71dde0161233386e"
+      url "https://github.com/hanzoai/replicate/releases/download/v0.9.3/replicate-0.9.3-darwin-arm64.tar.gz"
+      sha256 "b42daa858240f316ef8ba48f6376242d813b07d9e9bca1fb86eb2ac482f8b32e"
 
       define_method(:install) do
         bin.install "replicate"
@@ -31,24 +31,24 @@ class Replicate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hanzoai/replicate/releases/download/v0.9.2/replicate-0.9.2-linux-x86_64.tar.gz"
-      sha256 "65f83235dcb0e57f865def1da9f59c895284c33e4912c4bc7afff042e1dc53f3"
+      url "https://github.com/hanzoai/replicate/releases/download/v0.9.3/replicate-0.9.3-linux-x86_64.tar.gz"
+      sha256 "a89560ee4af95ffe8cfcf9c2e87f965c407bee66ae6d3412b2dca91883ab4dde"
       define_method(:install) do
         bin.install "replicate"
         etc.install "etc/replicate.yml" => "replicate.yml"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hanzoai/replicate/releases/download/v0.9.2/replicate-0.9.2-linux-armv6.tar.gz"
-      sha256 "bcaea8a1bb344ff6f35c9d5fd8bca55c2bd68b72597d5fca100f54a96aed0f15"
+      url "https://github.com/hanzoai/replicate/releases/download/v0.9.3/replicate-0.9.3-linux-armv6.tar.gz"
+      sha256 "1a7d14f1d9c7b8db1e25c8ce5780b0851074c68c965f212215193f4b25568337"
       define_method(:install) do
         bin.install "replicate"
         etc.install "etc/replicate.yml" => "replicate.yml"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hanzoai/replicate/releases/download/v0.9.2/replicate-0.9.2-linux-arm64.tar.gz"
-      sha256 "511db08776ec3e9e85e1bb2ba9152120fd24f9811fa2df9377d597e7db22f12c"
+      url "https://github.com/hanzoai/replicate/releases/download/v0.9.3/replicate-0.9.3-linux-arm64.tar.gz"
+      sha256 "8f80c07d443d8f5b2adac57cdadc8bdd0b3680d741c230abc389df0cf264aab2"
       define_method(:install) do
         bin.install "replicate"
         etc.install "etc/replicate.yml" => "replicate.yml"
